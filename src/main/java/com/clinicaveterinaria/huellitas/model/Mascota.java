@@ -1,13 +1,7 @@
 package com.clinicaveterinaria.huellitas.model;
 
 import com.clinicaveterinaria.huellitas.enums.TIPO;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "MASCOTAS")
@@ -16,9 +10,15 @@ public class Mascota {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "nombre", nullable = false)
     private String nombre;
+
+    @Column(name = "tipo", nullable = false)
     @Enumerated(EnumType.STRING)
     private TIPO tipo;
+
+    @Column(name = "edad", nullable = false)
     private int edad;
 
     public Mascota() {

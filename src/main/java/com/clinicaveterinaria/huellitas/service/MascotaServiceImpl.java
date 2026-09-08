@@ -1,3 +1,4 @@
+package com.clinicaveterinaria.huellitas.service;
 import com.clinicaveterinaria.huellitas.model.Mascota;
 import com.clinicaveterinaria.huellitas.repository.MascotaRepository;
 import com.clinicaveterinaria.huellitas.service.MascotaService;
